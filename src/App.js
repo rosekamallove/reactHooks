@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import UseState from "./hooks/UseState.js";
+import UseEffect from "./hooks/UseEffect.js";
 
 function App() {
   return (
     <>
-      <h1> UseState:</h1>
-      <UseState />
+      <UseEffect />
     </>
   );
 }
