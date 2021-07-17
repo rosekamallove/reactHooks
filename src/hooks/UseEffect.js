@@ -5,8 +5,15 @@ import { useFetch } from "./customHooks/useFetch";
 const UseState = () => {
   const [values, handleChange] = useForm({ email: "", password: "" });
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() =>
+    JSON.parse(localStorage.getItem("count"))
+  );
   const { data, loading } = useFetch(`http://numbersapi.com/${count}`);
+
+  useEffect(() => {
+    localStorage.setItem("count", JSON.stringify(count));
+  }, [count]);
+
   /*
   useEffect(
     () => {
