@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import UseEffect from "./hooks/UseEffect.js";
+import UseRef from "./hooks/UseRef";
 
 function App() {
   return (
     <>
-      <UseEffect />
+      <UseRef />
     </>
   );
 }
